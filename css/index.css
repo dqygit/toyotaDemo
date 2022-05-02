@@ -1,0 +1,748 @@
+body {
+    font-family: "microsoft yahei", "微软雅黑";
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    width: 1288px;
+    margin: 0px auto;
+}
+
+header>.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+header {
+    box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, .5);
+    position: sticky;
+    top: 0px;
+    background-color: #FFFFFF;
+    z-index: 999;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+header {}
+
+.clearfic::after {
+    content: "";
+    display: table;
+    height: 0px;
+    clear: both;
+}
+
+#header_left,
+#header_right {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#header_left>li,
+#header_right>li {
+    float: left;
+    line-height: 70px;
+    padding: 0px 14px;
+}
+
+.logo {
+    justify-self: center;
+    align-self: center;
+}
+
+.logo>img {
+    vertical-align: middle;
+}
+
+#header_right {
+    margin-right: 0px;
+    justify-self: right;
+}
+
+header a {
+    position: relative;
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    left: 0px;
+    bottom: -23px;
+    transform: scaleX(0);
+    transition: all .3s;
+}
+
+header a:hover::after {
+    transform: scaleX(1);
+    background-color: red;
+}
+
+
+/* banner开始 */
+
+.banner {
+    overflow: hidden;
+    font-size: 0px;
+    position: relative;
+    z-index: 0;
+}
+
+.banner img {
+    width: 100%;
+}
+
+#swiper_link {
+    position: absolute;
+    display: block;
+    bottom: 130px;
+    height: 4px;
+    left: 0px;
+    right: 0px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+}
+
+#swiper_link li {
+    padding: 10px 36px;
+    margin: 0px 10px;
+    cursor: pointer;
+    position: relative;
+    color: #000;
+}
+
+#swiper_link li:nth-of-type(1) {
+    color: #fff;
+}
+
+#swiper_link li::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0px;
+    height: 4px;
+    background-color: currentColor;
+}
+
+
+/* car_show开始 */
+
+.car_show {
+    width: 1276px;
+    height: 545px;
+    background-color: brown;
+    margin: -80px auto 140px;
+    transform: scale(1);
+    z-index: 1;
+    background: url(../img/bg-car-lunbo.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 5px 1px rgb(0, 0, 0, .5);
+    position: relative;
+    border-radius: 0px 0px 2px 2px;
+}
+
+.car_show_banner {
+    position: absolute;
+    width: 1026px;
+    height: 353px;
+    overflow: hidden;
+    left: 0px;
+    right: 0px;
+    bottom: 48px;
+    margin: auto;
+}
+
+.car_show_banner .swiper-slide {
+    display: flex;
+}
+
+.car_show_banner .swiper-slide .slide-group {
+    flex: 1;
+    height: 100%;
+    /* display: flex; */
+}
+
+.car_show_banner .swiper-slide .slide-group img {
+    width: 440px;
+    display: block;
+    margin: 0 auto;
+}
+
+.car-grounp-text {
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 45px;
+}
+
+.car-grounp-text>span {
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+    display: block;
+    position: relative;
+}
+
+.car-grounp-text>span::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 8px;
+    bottom: -14px;
+    position: absolute;
+    left: 0px;
+    background: url(../img/txet-bot-border.png) no-repeat;
+    /* background-size: cover; */
+    background-position: center;
+}
+
+.nav_btn {
+    height: 42px;
+    margin-top: 60px;
+}
+
+.nav_btn_left {
+    display: inline-block;
+    width: 215px;
+    height: 42px;
+    margin-left: 20px;
+    vertical-align: top;
+    background: url(../img/bg-yysj.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.nav_btn_left>span,
+.nav_btn_right>span {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin-left: 9px;
+    background: url(../img/small-light-jt.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.nav_btn_right {
+    display: inline-block;
+    width: 220px;
+    height: 100%;
+    margin-left: 20px;
+    background: url(../img/bg-jxscx.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+}
+
+.nav_btn_right>span {
+    background-image: url(../img/small-dark-jt.png);
+}
+
+.car_last_btn {
+    width: 70px;
+    height: 100px;
+    /* background-color: black; */
+    position: absolute;
+    top: 30%;
+    background: url(../img/btn-car-lunbo-left.png) no-repeat;
+    cursor: pointer;
+}
+
+.car_next_btn {
+    width: 70px;
+    height: 100px;
+    position: absolute;
+    background: url(../img/btn-car-lunbo-right.png) no-repeat;
+    cursor: pointer;
+    top: 30%;
+    right: 0px;
+}
+
+
+/* car_show结束 */
+
+
+/* tab_list开始 */
+
+.tab_list {
+    width: 1353px;
+    height: 71px;
+    margin: 0 auto;
+    border-bottom: 1px solid #c2c2c2;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 146px;
+}
+
+.tab_list>h2 {
+    display: inline-block;
+    line-height: 72px;
+    padding: 0px 50px;
+    font-size: 0px;
+    position: relative;
+    cursor: pointer;
+    color: transparent;
+}
+
+.tab_list>h2:first-child {
+    color: rgba(230, 0, 32, 1);
+}
+
+.tab_list>h2>span {
+    color: initial;
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.tab_list>h2>span:first-child {
+    bottom: 10px;
+    display: none;
+}
+
+.tab_list>h2:nth-of-type(1)>span:first-child {
+    position: absolute;
+    left: -86px;
+    display: block;
+}
+
+.tab_list>h2:nth-of-type(2)>span:first-child {
+    position: absolute;
+    left: -30px;
+}
+
+.tab_list>h2:nth-of-type(3)>span:first-child {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tab_list>h2>span:last-child {
+    /* transform: scale(1); */
+    position: relative;
+}
+
+.tab_list>h2>span:first-child {
+    color: #eee;
+    font-size: 72px;
+}
+
+.tab_list>h2::after {
+    content: "";
+    display: block;
+    width: 105px;
+    height: 4px;
+    position: absolute;
+    background-color: currentColor;
+    bottom: 1px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+.tab_content {
+    width: 100%;
+    height: 483px;
+    background-color: hsl(0, 0%, 96%);
+    padding-top: 1px;
+    padding-bottom: 105px;
+}
+
+.tab_content_box {
+    width: 1290px;
+    height: 568px;
+    margin: -70px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab_content_box_item {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 8px -3px rgba(0, 0, 0, .5);
+}
+
+.tab_content_box_img {
+    overflow: hidden;
+    font-size: 0px;
+}
+
+.tab_content_box_item img {
+    width: 100%;
+    /* height: fit-content; */
+    transition: all 0.5s;
+}
+
+.tab_content_box_img>img:hover {
+    transform: scale(1.1);
+}
+
+.tab_content_box_item>.title {
+    padding: 10px 20px;
+    height: 168px;
+    font-size: 14px;
+    box-shadow: 0px 21px 0px -20px #333;
+}
+
+.time {
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
+.detail {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+.f_ele {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.ft_news {
+    padding: 135px 0px 100px;
+}
+
+.ft_news h2 {
+    font-size: 56px;
+    color: #eee;
+    text-align: center;
+    width: 1350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ft_news h2 span {
+    font-size: 24px;
+    color: #333;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    bottom: 5px;
+    left: 0px;
+    right: 0px;
+    margin: auto auto;
+}
+
+.ft_news h2::after,
+.ft_news h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 455px;
+    background-color: #000;
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0px;
+}
+
+.ft_news h2::before {
+    right: 0px;
+}
+
+
+/* ftn_content开始 */
+
+.ftn_content {
+    position: relative;
+    font-size: 0px;
+}
+
+.ftn_content_top {
+    height: 300px;
+    background-color: #f5f5f5;
+}
+
+.ftn_content_bottom {
+    height: 230px;
+}
+
+.ftn_content_item {
+    width: 1272px;
+    height: 328px;
+    left: 0px;
+    right: 0px;
+    top: 135px;
+    margin: 0px auto;
+    position: absolute;
+    display: flex;
+}
+
+.ftn_content_item>img {
+    height: 100%;
+}
+
+.ftn_box {
+    flex: 1;
+    font-size: initial;
+    color: #e60020;
+    padding-left: 60px;
+    padding-right: 40px;
+    position: relative;
+    /* overflow: hidden; */
+    /* width: 100%; */
+}
+
+.ft_title {
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.ftn_box h2 {
+    font-size: 22px;
+    color: #000;
+    height: 140px;
+}
+
+.ft_txt {
+    display: inline-block;
+}
+
+.knowMore {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    bottom: 0px;
+    left: 60px;
+    background: #e60020;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+
+.wrap_content {
+    width: 1282px;
+    height: 30px;
+    /* background: skyblue; */
+    margin: 0 auto;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.carType {
+    flex-basis: 193px;
+    /* border: 1px solid; */
+    font-size: 0px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.carType>span {
+    font-size: initial;
+    vertical-align: middle;
+    color: #544e4e;
+}
+
+.carType img {
+    vertical-align: middle;
+    margin-left: 15px;
+    transform: rotateZ(90deg);
+    transition: .2s ease;
+}
+
+.carType:hover img {
+    transform: rotateZ(0deg);
+}
+
+.carType:hover {
+    border-bottom: 2px solid #e60020;
+}
+
+.wrap_middle {
+    width: 1282px;
+    height: 112px;
+    padding: 20px 0px;
+    margin: 0px auto;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.middle_left {
+    flex-basis: 38vw;
+    display: grid;
+    grid-template: 'a a' 1fr 'b c' 1fr 'd e' 1fr / 1fr 1fr;
+}
+
+.middle_center {
+    flex-basis: 31vw;
+}
+
+.middle_left div {
+    text-align: center;
+    cursor: pointer;
+    color: #544e4e;
+}
+
+.middle_left div:hover span {
+    border-bottom: 2px solid #e60020;
+    padding-bottom: 5px;
+}
+
+.middle_left div:nth-child(1) {
+    grid-area: a;
+    /* background-color: blue; */
+    padding-bottom: 20px;
+    text-align: center;
+    color: #544e4e;
+}
+
+.middle_left div:nth-child(1) h2 {
+    font-size: 20px;
+}
+
+.middle_left div:nth-child(2) {
+    grid-area: b;
+}
+
+.middle_left div:nth-child(3) {
+    grid-area: c;
+}
+
+.middle_left div:nth-child(4) {
+    grid-area: d;
+}
+
+.middle_left div:nth-child(5) {
+    grid-area: e;
+}
+
+.middle_right {
+    flex-basis: 31vw;
+}
+
+.middle_center {
+    color: #544e4e;
+}
+
+.middle_center h2,
+.middle_right h2 {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #544e4e;
+}
+
+.middle_item {
+    text-align: center;
+}
+
+.middle_item>span {
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.middle_item+.middle_item {
+    margin-top: 4px;
+}
+
+.middle_item>span:hover {
+    border-bottom: 2px solid #e60020;
+}
+
+.middle_item>img {
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.middle_icon {
+    text-align: center;
+}
+
+.middle_icon>img+img {
+    margin-left: 40px;
+}
+
+.wrap_middle>div+div {
+    border-left: 1px solid #ccc;
+}
+
+.footer_wrap {
+    padding: 20px 0px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    color: #544e4e;
+}
+
+.footer_wrap>div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_wrap>div:nth-child(1) div {
+    flex: auto;
+    padding: 0px 20px;
+    color: #544e4e;
+    cursor: pointer;
+}
+
+.footer_wrap>div:nth-child(1) div+div {
+    box-shadow: -5px 0px 0px -4px #ccc;
+}
+
+.footer_wrap>div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer_wrap>div:nth-child(2)>div {
+    flex: auto;
+    padding: 0px 20px;
+}
+
+.footer_wrap>div:nth-child(2)>div+div {
+    box-shadow: -5px 0px 0px -4px #ccc;
+}
+
+.footer_wrap>div:nth-child(2)>div:nth-child(2)::after {
+    content: "©2021丰田汽车（中国）投资有限公司 版权所有";
+    padding-left: 10px;
+}
